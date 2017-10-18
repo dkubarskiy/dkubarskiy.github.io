@@ -1,0 +1,267 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	background: #fff;
+	color: #191b26;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family: 'Open Sans', sans-serif;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #e6618c;
+	text-decoration: underline;
+}
+a:hover {
+	color: #fdf208;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #c83867;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+.center-block-main{
+	width: 1280px; margin: 0 auto;
+}
+header{
+	width: 100%; border-bottom: 1px solid #d8d9e6;
+}
+	.logo{
+		float: left; margin: 16px 30px 16px 0;
+	}
+	.menu{
+		float: left; margin-top: 44px;
+	}
+		.menu li{
+			float: left; font-size: 1em; font-weight: 600; margin-right: 15px;
+		}
+		.menu li a{
+			color: #191b26; text-decoration: none;
+		}
+		.menu li a:hover{
+			cursor: pointer;
+		}
+	.header-phone{
+		font-size: 1.5em; font-weight: 600; float: left; color: #191b26; margin-top: 37px; margin-left: 123px;
+	}
+	.client-nav{
+		float: right; margin-top: 26px;
+	}
+		.client{
+		float: left; text-align: center;
+		}
+			.client-name a{
+				float: left; text-decoration: none; color: #191b26; border-bottom-style: dotted;
+			}
+			.account{
+				float: left; margin-right: 16px; margin-top:13px;
+			}
+			.client-name{
+				float: left; margin-top: 16px;
+			}
+			.exit{
+				float: left; margin-left: 24px; margin-top: 18px;
+			}
+		.lang{
+		float: left; padding: 12px 8px; margin-right: 10px;  margin-top:7px; border: 1px solid #d8d9e6; border-top: none; border-bottom: none;
+		}
+		
+.pers-cab{
+	margin-top: 40px; padding-bottom: 33px; border-bottom: 1px solid #d8d9e6;
+}
+	.pers-cab-h2{
+		float:left; font-size: 1.5em; font-weight: 400; margin-top:-8px;
+	}
+		.pers-cab-nav ul {
+			float: right;
+		}
+			.pers-cab-nav li{
+				float: left; margin-left: 47px;
+			}
+			.pers-cab-nav li a{
+				color: #87afc7; text-decoration: none; padding-bottom: 33px;
+			}
+			.pers-cab-nav li a:hover{
+				color: #018ae0; border-bottom: 4px solid #018ae0;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.client-info{
+	margin-top: 45px;
+}
+	.client-info p{
+		font-size: 1.5em; font-weight: 400;
+	}
+	.client-info span{
+		font-size: 0.875em; font-weight: 400; color: #87afc7;
+	}
+		.client-hello{
+			float: left; margin-right: 170px; margin-top: 22px;
+		}
+		.tarif{
+			float: left; margin-right: 128px;
+		}
+			.tarif img{
+				float: left; margin: 10px 50px 5px 0;
+			}
+			.tarif-text{
+				float: left;
+			}
+		.balance{
+			float: left; margin-right: 70px;
+		}
+			.balance img{
+				float: left; margin: 14px 50px 5px 0;
+			}
+			.balance-text{
+				float: left;
+			}
+		a.pay-btn{
+			float: right; color: #fff; background: #04b389; display: inline-block; padding: 20px 50px; border: none; border-radius: 5px; font-size: 1em; text-decoration: none;
+		}
+		a.pay-btn:hover{
+			background: #ff6a39;
+			-webkit-transition: all 0.2s linear;
+			-moz-transition: all 0.2s linear;
+			-o-transition: all 0.2s linear;
+			transition: all 0.2s linear;
+		}
+
+.alert{
+	margin-top: 40px; padding: 30px 0; background: #ff3b38; color: #fff; border-radius: 5px; 
+}
+	.credit{
+		float: left; font-weight: 600; margin-left: 70px;
+	}
+		.credit span{
+			font-size: 1.125em; font-weight: 600;
+		}
+		.credit p{
+			font-size: 1em; font-weight: 300;
+		}
+	/*.limit-time{
+		float: right;
+	}*/
+		.limit{
+			float: left; text-align: left;
+		}
+			.limit span{
+				font-size: 0.875em; font-weight: 300; float: left;
+			}
+			.limit p{
+				font-size: 2.25em; font-weight: 300;
+			}
+
+		.time{
+			float: right;
+		}
+			.time span{
+				font-size: 0.875em; font-weight: 300;
+			}
+			.time p{
+				font-size: 1.5em; font-weight: 300;
+			}
