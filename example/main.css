@@ -682,7 +682,7 @@ header .container {
     display: flex;
     position: absolute;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     visibility: hidden;
     opacity: 0;
@@ -1818,35 +1818,28 @@ width: 100%;
     text-align: left;
 }
 
-.account__container {
-    display: flex
+.account__menu_container {
+    display: flex;
+    max-width: 1180px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .account__menu {
-    display: none;
-    padding: 0;
-    margin: 0;
-    list-style: none
-}
-
-@media (min-width: 1024px) {
-    .account__menu {
-        display: flex;
-        width: 180px;
-        min-height: calc(100vh - 170px);
-        flex-direction: column;
-        flex-shrink: 0;
-        flex-grow: 0
-    }
+    display: flex;
+    float: right;
 }
 
 .account__menu-item {
+    float: left;
     display: flex;
+    flex-direction: row;
     flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-    background: #b2bce3;
-    border-top: 1px solid #fff
+    align-items: flex-start;
+    margin-right: 10px;
+    margin-top: 30px;
+    border-top: 1px solid #fff;
 }
 
 .account__menu-item:first-child {
@@ -1859,12 +1852,12 @@ width: 100%;
 
 .account__menu-item a {
     text-decoration: none;
-    color: #fff;
+    color: #87afc7;
     transition: color 0.5s ease
 }
 
 .account__menu-item a:hover {
-    color: #ffe900
+    color: #018ae0
 }
 
 .account__menu-item.current-menu-item a {
@@ -1872,9 +1865,9 @@ width: 100%;
 }
 
 .account__heading {
-    margin: 0 0 20px;
     color: #0069b0;
-    font-weight: normal
+    font-weight: normal;
+    margin-left: 40px;
 }
 
 @media (min-width: 768px) {
@@ -1896,10 +1889,12 @@ width: 100%;
 }
 
 .account__button {
-    position: relative;
+    float: right;
     width: auto;
     display: inline-block;
     text-decoration: none;
+    margin-left: 40px;
+    margin-bottom: 20px;
     color: #fff;
     background: #00AA61;
     padding: 10px 20px;
@@ -1910,6 +1905,7 @@ width: 100%;
 }
 
 .account__button span {
+    float: right;
     display: block;
     position: absolute;
     top: 100%;
@@ -1929,7 +1925,9 @@ width: 100%;
 
 .account-home__table {
     max-width: 600px;
-    display: flex
+    display: flex;
+    margin-left: 150px;
+    float: right;
 }
 
 .account-home__cell {
@@ -1971,28 +1969,32 @@ width: 100%;
 }
 
 .account-home__button {
-    margin-top: 20px
+    margin-top: 20px;
 }
 
 .account__content {
+    width: 400px;
     margin-top: 30px;
     color: #515151;
-    line-height: 1.5
+    line-height: 1.5;
 }
 
 .account__content h3 {
     margin: 0 0 10px;
-    color: #0069b0
+    color: #0069b0;
 }
 
 .account__warning {
     margin-top: 30px;
-    color: #f39200;
-    line-height: 1.5
+    padding:10px 40px;
+    color: #fff;
+    line-height: 1.5;
+    background: #ff3b38;
+    border-radius: 5px;
 }
 
 .account__warning h3 {
-    margin: 0 0 10px
+    margin: 0 0 10px;
 }
 
 .connect {
@@ -2011,12 +2013,12 @@ header.connect__header .container {
 .connect__heading {
     font-weight: normal;
     font-size: 20px;
-    margin: 0
+    margin: 0;
 }
 
 @media (min-width: 768px) {
     .connect__heading {
-        font-size: 36px
+        font-size: 36px;
     }
 }
 
@@ -2028,7 +2030,7 @@ padding:0;
 
 @media (min-width: 768px) {
     .connect__steps {
-        padding: 20px
+        padding: 20px;
     }
 }
 
@@ -2040,15 +2042,15 @@ padding:0;
 }
 
 .connect__step:last-child {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
     .connect__step--2 {
-        animation-delay: 200ms
+        animation-delay: 200ms;
     }
     .connect__step--3 {
-        animation-delay: 400ms
+        animation-delay: 400ms;
     }
 }
 
@@ -2075,12 +2077,12 @@ padding:0;
     .connect__marker {
         flex-shrink: 0;
         flex-grow: 0;
-        margin: 0
+        margin: 0;
     }
 }
 
 .connect__info {
-    text-align: left
+    text-align: left;
 }
 
 
@@ -2098,7 +2100,7 @@ line-height: 32px;
 
 @media (min-width: 768px) {
     .connect__title {
-        font-size: 16px
+        font-size: 16px;
     }
 }
 
@@ -2109,7 +2111,7 @@ line-height: 32px;
 
 .connect__contract {
     padding: 20px 0;
-    text-align: center
+    text-align: center;
 }
 
 .connect__contract-link {
@@ -2126,39 +2128,39 @@ line-height: 32px;
 
 .connect__contract-link:hover {
     background: #0069b0;
-    color: #fff
+    color: #fff;
 }
 
 .connect__contract-link span, .connect__contract-link svg {
     display: inline-block;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 .connect__contract-link span {
-    margin-right: 20px
+    margin-right: 20px;
 }
 
 .connect__contract-link svg {
     width: 50px;
-    height: auto
+    height: auto;
 }
 
 .s-heading {
     font-weight: normal;
     font-size: 28px;
-    margin: 0
+    margin: 0;
 }
 
 @media (min-width: 768px) {
     .s-heading {
-        font-size: 28px
+        font-size: 28px;
     }
 }
 .page-services .body {
     min-height: auto;
 }
 .s-plans {
-    text-align: center
+    text-align: center;
 }
 
 .s-plans__heading {
@@ -2189,7 +2191,7 @@ color:#181f26 !important;
 .s-plans__list {
     padding: 0;
     margin: 0;
-    list-style: none
+    list-style: none;
 }
 
 @media (min-width: 1024px) {
@@ -2217,19 +2219,19 @@ color:#181f26 !important;
 }
 
 .s-plans__item:first-child {
-    margin-top: 0
+    margin-top: 0;
 }
 
 @media (min-width: 1024px) {
     .s-plans__item {
         width: 100%;
-        margin-top: 0
+        margin-top: 0;
     }
     .s-plans__item--2 {
-        animation-delay: 200ms
+        animation-delay: 200ms;
     }
     .s-plans__item--3 {
-        animation-delay: 400ms
+        animation-delay: 400ms;
     }
 }
 
@@ -2243,13 +2245,13 @@ color:#181f26 !important;
 
 @media (min-width: 768px) {
     .s-plans__title {
-        padding: 30px
+        padding: 30px;
     }
 }
 
 .s-plans__description {
     padding: 10px;
-    line-height: 1.6
+    line-height: 1.6;
 }
 
 .s-plans__buttons {
@@ -2304,7 +2306,7 @@ color:#181f26 !important;
 .s-for-new__text {
     position: relative;
     line-height: 1.4;
-    text-align: center
+    text-align: center;
 }
 .s-for-new__text p{
 color: #181f26;
@@ -2318,7 +2320,7 @@ color: #181f26;
 }
 
 .s-for-new__smile {
-    display: none
+    display: none;
 }
 
 @media (min-width: 768px) {
@@ -2330,7 +2332,7 @@ color: #181f26;
         top: 0;
         right: 0;
         background: url("../img/smile.png") no-repeat 100% 50%;
-        background-size: 150px auto
+        background-size: 150px auto;
     }
 }
 
@@ -2344,20 +2346,20 @@ color: #181f26;
 
 @media (min-width: 768px) {
     .s-additional__heading {
-        padding: 40px 0
+        padding: 40px 0;
     }
 }
 
 .s-additional__list {
     list-style: none;
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 @media (min-width: 768px) {
     .s-additional__list {
         display: flex;
-        justify-content: center
+        justify-content: center;
     }
 }
 
@@ -2375,7 +2377,7 @@ color: #181f26;
         margin-right: 30px;
     }
     .s-additional__item--2 {
-        animation-delay: 200ms
+        animation-delay: 200ms;
     }
 }
 
@@ -2402,7 +2404,7 @@ color: #181f26;
 
 @media (min-width: 768px) {
     .s-additional__title {
-        font-size: 16px
+        font-size: 16px;
     }
 }
 
@@ -2443,7 +2445,7 @@ color: #181f26;
 
 .s-payment__header {
     padding: 30px 0;
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
@@ -2453,12 +2455,12 @@ color: #181f26;
 .s-payment__subheading {
     display: block;
     margin-top: 10px;
-    font-weight: normal
+    font-weight: normal;
 }
 
 @media (min-width: 768px) {
     .s-payment__subheading {
-        font-size: 20px
+        font-size: 20px;
     }
 }
 
@@ -2469,7 +2471,7 @@ color: #181f26;
 
 @media (min-width: 768px) {
     .s-payment__block {
-        padding-bottom: 60px
+        padding-bottom: 60px;
     }
 }
 
@@ -2481,14 +2483,14 @@ color: #181f26;
 
 .s-payment__logos {
     padding-top: 20px;
-    font-size: 0
+    font-size: 0;
 }
 
 .s-payment__logos img {
     display: inline-block;
     max-width: 105px;
     vertical-align: middle;
-    margin: 10px
+    margin: 10px;
 }
 
 @media (min-width: 768px) {
@@ -2505,7 +2507,7 @@ color: #181f26;
 
 @media (min-width: 768px) {
     .s-bonus {
-        padding: 40px 0
+        padding: 40px 0;
     }
 }
 
@@ -2532,7 +2534,7 @@ color: #181f26;
 @media (min-width: 768px) {
     .s-bonus__text {
         margin-top: 30px;
-        font-size: 14px
+        font-size: 14px;
     }
 }
 
@@ -2546,7 +2548,7 @@ color: #181f26;
 
 @media (min-width: 768px) {
     .about__heading {
-        font-size: 28px
+        font-size: 28px;
     }
 }
 
@@ -2560,20 +2562,20 @@ color: #181f26;
 
 @media (min-width: 768px) {
     .about__description {
-        font-size: 16px
+        font-size: 16px;
     }
     .about__description .container {
-        max-width: 840px
+        max-width: 840px;
     }
 }
 
 .about__list {
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
     .about__list {
-        margin-bottom: 40px
+        margin-bottom: 40px;
     }
 }
 
@@ -2584,7 +2586,7 @@ color: #181f26;
 @media (min-width: 768px) {
     .about__info {
         display: flex;
-        align-items: center
+        align-items: center;
     }
 }
 
@@ -2606,7 +2608,7 @@ about__intro{
     max-width: 75%;
 }
 .about__img img {
-    display: block
+    display: block;
 }
 .about__facts{
     margin-top: 50px;
@@ -2624,19 +2626,19 @@ about__intro{
 }
 
 .about__content {
-    padding: 30px 20px
+    padding: 30px 20px;
 }
 
 @media (min-width: 768px) {
     .about__content {
         width: 50%;
-        padding: 0 20px
+        padding: 0 20px;
     }
 }
 
 @media (min-width: 1024px) {
     .about__content {
-        padding: 40px
+        padding: 40px;
     }
 }
 
@@ -2647,7 +2649,7 @@ about__intro{
 @media (min-width: 768px) {
     .about__title {
         text-align: left;
-        font-size: 24px
+        font-size: 24px;
     }
 }
 
@@ -2656,7 +2658,7 @@ about__intro{
 }
 
 .about__text p:last-child {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 .facts__list {
@@ -2682,7 +2684,7 @@ line-height: 30px;
 }
 
 .fact__icon--2 {
-    background-image: url(../hinet/assets/img/about/advantages2.png)
+    background-image: url(../hinet/assets/img/about/advantages2.png);
 }
 
 .fact__icon--3 {
@@ -3547,7 +3549,7 @@ h5 {
     .s-plans__item {
     flex-direction: column;
     margin-top: 0;
-            text-align: left;
+    text-align: left;
     padding: 10px;
         
     }
