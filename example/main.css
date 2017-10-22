@@ -739,8 +739,8 @@ header .container {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1)
 }
 
-.menu__item.current-menu-item a, .menu-item.current-menu-item a{
-    color: #f39200
+/*.menu__item.current-menu-item a, .menu-item.current-menu-item a{
+    color: #f39200*/
 }
 .menu__languages-hover .current-lang{
     border-bottom: 1px solid #ccc;
@@ -782,9 +782,9 @@ box-sizing:border-box;
     .menu__item--mobile {
         display: none
     }
-    .menu__item.current-menu-item a, .menu-item.current-menu-item a{
+   /* .menu__item.current-menu-item a, .menu-item.current-menu-item a{
         color: #fe6a3a;
-    }
+    }*/
 }
 
 .menu__item a, .menu-item a{
@@ -1846,9 +1846,9 @@ width: 100%;
     border: 0
 }
 
-.account__menu-item.current-menu-item {
+/*.account__menu-item.current-menu-item {
     background: #00963f
-}
+}*/
 
 .account__menu-item a {
     text-decoration: none;
@@ -1857,11 +1857,16 @@ width: 100%;
 }
 
 .account__menu-item a:hover {
-    color: #018ae0
+    color: #018ae0;
+    border-bottom: 1px solid #018ae0;
 }
 
 .account__menu-item.current-menu-item a {
-    color: #fff
+    color: #87afc7;
+}
+
+.account__menu-item.current-menu-item a:hover {
+    color: #87afc7;
 }
 
 .account__heading {
@@ -1926,7 +1931,7 @@ width: 100%;
 .account-home__table {
     max-width: 600px;
     display: flex;
-    margin-left: 150px;
+    margin-left: 90px;
     float: right;
 }
 
@@ -1973,10 +1978,17 @@ width: 100%;
 }
 
 .account__content {
+    float: left;
     width: 400px;
     margin-top: 30px;
     color: #515151;
     line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline; 
+    background: transparent;
 }
 
 .account__content h3 {
@@ -2194,12 +2206,12 @@ color:#181f26 !important;
     list-style: none;
 }
 
-@media (min-width: 1024px) {
+/*@media (min-width: 1024px) {
     .s-plans__list {
         display: flex;
         flex-direction: column;
         justify-content: normal;
-    }
+    }*/
 }
 
 .s-plans__item {
